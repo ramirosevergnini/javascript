@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blueviolet;
+            color: white;
+        }
+        header{
+            text-align: center;
+        }
+        section{
+            background-color: white;
+            color: black;
+            height: 300px;
+            width: 600px;
+            border-radius: 20px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.418);
+            margin: auto;
+        }
+        #form{
+            text-align: center;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section>
+        <div id="form">
+            Ano de nascimento: <input type="number" name="ano" id="ano" required><br>
+            Sexo: <input type="radio" name="sexo" id="isxmas" required>
+            <label for="isx">Masculino</label>
+            <input type="radio" name="sexo" id="isxfem">
+            <label for="isx">Feminino</label><br>
+            <input type="submit" value="Enviar" onclick="carregar()">
+        <div>
+        <div>
+            <p id="idade">Idade</p>
+        </div>
+        <div #img>
+            <img src="homem.jpg" alt="" hidden>
+        </div>
+        <script>
+            function carregar(){
+                
+                var data = new Date()
+                var ano = data.getFullYear()
+                var fano = document.getElementById('ano')
+                var res = document.getElementById('idade')
+                var img = document.getElementById('img')
+                var idade = ano - Number(fano.value)
+                var sex = document.getElementsByName('sexo')
+                res.innerHTML = `Você é ${genero} tem ${idade} anos!`
+                var genero = ''
+                if(sexo[0].checked){
+                    genero = 'Homem'
+                    img.src = 'homem.jpg'
+                }else if(sexo[1].checked){
+                    genero = "Mulher"
+                    img.src = 'mulher.jpg'
+                }
+                
+            }
+        </script>
+    </section>
+</body>
+</html>
