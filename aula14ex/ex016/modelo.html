@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregar()">
+    <header>
+        <h1>Vamos contar!</h1>
+    </header>
+    <section>
+        <div id="msg">
+            <form action="">
+                Início: <input type="number" name="numero" id="inumero" required><br>
+                Fim: <input type="number" name="numero2" id="inumero2" required><br>
+                Passo: <input type="number" name="passo" id="ipasso" required><br>
+                <button type="button" onclick="contar()">Enviar</button>
+            </form>
+        </div>
+        <div id="res">
+            <p>Preparando contagem...</p>
+        </div>
+
+    </section>
+    <footer>
+        <p>Desenvolvido por &copy; Ramiro Severgnini</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
